@@ -1,0 +1,102 @@
+<!--  Create Web page for Hotel room 
+booking form: Use of input fields, 
+labels, select, textarea, and buttons.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-color: #4b1e1e;
+    }
+    .Header{
+        background-color:#3f1f1f;
+        border:2px solid black;
+        width:100%;
+        padding:20px;
+        margin:0;
+    }
+    .logo{
+        width:150px;
+        height:200px;
+        margin-left:600px;
+    }
+    .ABES {
+        color: #fff;
+    }
+    .div-1{
+        background-color:#6d1515;
+        width:100%;
+        border:2px solid black;
+        padding:20px;
+        margin:0;
+    }
+    .Welcome{
+        background-color:#2f0404;
+        width:100%;
+        border:2px solid black;
+        padding:10px;
+        margin:0;
+    }
+    .form-start{
+        background-color:#2f0404;
+        width:100%;
+        border:2px solid black;
+        padding:10px;
+        margin:0;
+    }
+    .Address{
+        color:#ffffff !important;
+        font-size:20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .a{
+        background-color: #ffffff;
+        color:#000000;
+        font-size:15;
+    }
+
+</style>
+
+<body>
+    <Header class="Header" style="display: flex; align-items: center; gap: 16px;" text="white">
+        <img src="https://www.bing.com/th/id/OIP._mVfeIz_M5OghcDn9HD8RgAAAA?w=160&h=211&c=8&rs=1&qlt=90&o=6&cb=12&dpr=1.3&pid=3.1&rm=2" width="80" height="100">
+        <h1 align="Left" class="ABES" style="margin: 0;" > ABES Engineering college</h1>
+    </Header>
+
+    <div class="div-1">
+        <div class="Welcome" style="color:#ffffff">
+            <h1><b>Welcome to ABES Engineering College</b></h1>
+            <b>Welcome to ABES Engineering College. We are delighted to have you here. Our college is committed to providing quality education and fostering a vibrant learning environment. Explore our programs, facilities, and campus life to see what makes ABES a great place to study and grow.</b>
+            <br><br>
+        </div>
+        <h2 style="color:#ffffff"><b>Fill this form to send enquiry for admission<b></h2>
+        <div class="form-start">
+            <form action="https://example.com/submit-form" method="POST">
+                <!--Input name and email-->
+                <input class="a" type="text" id="name" name="name" placeholder="Full Name" required style="width: 300px; height: 30px; margin: 10px;"><br>
+                <input class="a" type="email" id="email" name="email" placeholder="Email Address" required style="width: 300px; height: 30px; margin: 10px;"><br>
+                <h1 class="Address"><b><u>Correspondence Address:</u></b></h1><br>
+                <!--Address-->
+                <textarea class="a" id="address" name="address" placeholder="Your Address" required style="width: 300px; height: 100px; margin: 10px;"></textarea><br>
+                <!--Phone Number-->
+                <input class="a" type="tel" id="phone" name="phone" placeholder="Phone Number" required style="width: 300px; height: 30px; margin: 10px;"><br>
+                <!--Branch selection-->
+                <select class="a" id="course" name="course" required style="width: 320px; height: 30px; margin: 10px;">
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="mtech">M.Tech</option>
+                    <option value="mba">MBA</option>
+                    <option value="mca">MCA</option>
+        
+        </div>
+    </div>
+
+</body>
+
+</html>
+    
