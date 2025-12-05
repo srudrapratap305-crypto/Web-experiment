@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Hotel | Room Booking</title>
+
+    <style>
+        /* --- 1. General & Body Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- 2. Header & Navigation --- */
+        .main-header {
+            background-color: #0d1b2a;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-nav {
+            background-color: #1b263b;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .main-nav a {
+            color: #e0e1dd;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #ffc107;
+        }
+        
+        /* --- 3. Main Content & Form Container --- */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1.form-title {
+            color: #0d1b2a;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* --- 4. Form Elements Styling --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #415a77;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1b263b;
+            box-shadow: 0 0 5px rgba(27, 38, 59, 0.2);
+        }
+
+        /* --- 5. Button Styling --- */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #1b263b;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0d1b2a;
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>The Grand Hotel</h1>
+    </header>
+
+    <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Rooms</a>
+        <a href="#">Amenities</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main class="container">
+        <h1 class="form-title">Book Your Stay</h1>
+        <form action="/submit-booking" method="POST">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                 <label for="roomType">Room Type:</label>
+                 <select id="roomType" name="roomType">
+                     <option value="single">Single Room</option>
+                     <option value="double">Double Room</option>
+                     <option value="suite">Suite</option>
+                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="6" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkIn">Check-in Date:</label>
+                <input type="date" id="checkIn" name="checkIn" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkOut">Check-out Date:</label>
+                <input type="date" id="checkOut" name="checkOut" required>
+            </div>
+
+            <div class="form-group">
+                <label for="specialRequests">Special Requests:</label>
+                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requirements? (e.g., late check-in, sea view)"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+    </main>
+</body>
+</html>
